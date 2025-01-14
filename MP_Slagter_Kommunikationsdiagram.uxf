@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
   <help_text/>
-  <zoom_level>10</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>880</x>
-      <y>180</y>
-      <w>150</w>
-      <h>30</h>
+      <x>968</x>
+      <y>64</y>
+      <w>120</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>:GUI_WorkSchedule</panel_attributes>
     <additional_attributes/>
@@ -16,10 +16,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>860</x>
-      <y>330</y>
-      <w>180</w>
-      <h>60</h>
+      <x>952</x>
+      <y>296</y>
+      <w>144</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>:WorkScheduleController</panel_attributes>
     <additional_attributes/>
@@ -27,10 +27,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1320</x>
-      <y>340</y>
-      <w>180</w>
-      <h>30</h>
+      <x>1512</x>
+      <y>304</y>
+      <w>144</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>:EmployeeController</panel_attributes>
     <additional_attributes/>
@@ -38,32 +38,32 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>560</x>
-      <y>410</y>
-      <w>190</w>
-      <h>30</h>
+      <x>584</x>
+      <y>536</y>
+      <w>152</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>:CleaningController</panel_attributes>
+    <panel_attributes>:RoomController</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>580</x>
-      <y>530</y>
-      <w>120</w>
-      <h>30</h>
+      <x>600</x>
+      <y>720</y>
+      <w>96</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>:CleaningDB</panel_attributes>
+    <panel_attributes>:RoomDB</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1000</x>
-      <y>500</y>
-      <w>200</w>
-      <h>30</h>
+      <x>1208</x>
+      <y>544</y>
+      <w>160</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>:WorkScheduleDB</panel_attributes>
     <additional_attributes/>
@@ -71,10 +71,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1320</x>
-      <y>500</y>
-      <w>180</w>
-      <h>30</h>
+      <x>1512</x>
+      <y>544</y>
+      <w>144</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>:EmployeeDB</panel_attributes>
     <additional_attributes/>
@@ -82,10 +82,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>820</x>
-      <y>500</y>
-      <w>120</w>
-      <h>30</h>
+      <x>920</x>
+      <y>544</y>
+      <w>96</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>:WorkSchedule</panel_attributes>
     <additional_attributes/>
@@ -93,10 +93,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1360</x>
-      <y>700</y>
-      <w>90</w>
-      <h>30</h>
+      <x>1544</x>
+      <y>720</y>
+      <w>72</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>:Employee</panel_attributes>
     <additional_attributes/>
@@ -104,120 +104,136 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>640</x>
-      <y>170</y>
-      <w>260</w>
-      <h>40</h>
+      <x>776</x>
+      <y>56</y>
+      <w>208</w>
+      <h>128</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>
+createEmptyWorkSchedule()
+getWorkSchedule()
+ChooseRoomToClean()
+getProduct()
+createDeliveryRoute()
+getDeliveryRoute()
+setEmployee()
+persistWorkSchedule()</panel_attributes>
     <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>940</x>
-      <y>200</y>
-      <w>30</w>
-      <h>150</h>
+      <x>1016</x>
+      <y>80</y>
+      <w>336</w>
+      <h>232</h>
     </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+    <panel_attributes>1: createEmptyWorkSchedule():void
+2: getEmptyWorkSchedule():workSchedule
+3: ChooseRoomToClean(room: string):HashSet&lt;string&gt; rooms
+4: getProduct(product: string) :HashSet&lt;string&gt; products
+5: createDeliveryRoute()
+6: getDeliveryRoute()
+7: setEmployee()
+8: persistCurrentWorkSchedule()</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;270.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>740</x>
-      <y>360</y>
-      <w>140</w>
-      <h>80</h>
+      <x>584</x>
+      <y>328</y>
+      <w>384</w>
+      <h>224</h>
     </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;60.0;40.0;60.0;40.0;20.0;120.0;20.0</additional_attributes>
+    <panel_attributes>3.1:ChooseRoomToClean(room: string):HashSet&lt;string&gt; rooms</panel_attributes>
+    <additional_attributes>80.0;260.0;80.0;70.0;420.0;70.0;420.0;10.0;460.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1030</x>
-      <y>330</y>
-      <w>310</w>
-      <h>40</h>
+      <x>1088</x>
+      <y>296</y>
+      <w>440</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;20.0;290.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;530.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>430</y>
-      <w>30</w>
-      <h>120</h>
+      <x>640</x>
+      <y>552</y>
+      <w>352</w>
+      <h>184</h>
     </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+    <panel_attributes>3.1.1:ChooseRoomToClean(room: string):HashSet&lt;string&gt; rooms</panel_attributes>
+    <additional_attributes>10.0;210.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>940</x>
-      <y>380</y>
-      <w>180</w>
-      <h>140</h>
+      <x>1048</x>
+      <y>336</y>
+      <w>256</w>
+      <h>224</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>160.0;120.0;10.0;10.0</additional_attributes>
+    <additional_attributes>300.0;260.0;300.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1400</x>
-      <y>360</y>
-      <w>30</w>
-      <h>160</h>
+      <x>1576</x>
+      <y>320</y>
+      <w>24</w>
+      <h>240</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;280.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>870</x>
-      <y>380</y>
-      <w>30</w>
-      <h>140</h>
+      <x>960</x>
+      <y>336</y>
+      <w>248</w>
+      <h>224</h>
     </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+    <panel_attributes>1.1:createEmptyWorkSchedule():void
+2.1: getEmptyWorkSchedule():workSchedule</panel_attributes>
+    <additional_attributes>10.0;260.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>550</y>
-      <w>30</w>
-      <h>180</h>
+      <x>640</x>
+      <y>736</y>
+      <w>360</w>
+      <h>176</h>
     </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+    <panel_attributes>3.1.1.1:ChooseRoomToClean(room: string):HashSet&lt;string&gt; rooms</panel_attributes>
+    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1400</x>
-      <y>520</y>
-      <w>30</w>
-      <h>200</h>
+      <x>1576</x>
+      <y>560</y>
+      <w>24</w>
+      <h>176</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>300</x>
-      <y>710</y>
-      <w>190</w>
-      <h>30</h>
+      <x>320</x>
+      <y>952</y>
+      <w>152</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>:Product</panel_attributes>
     <additional_attributes/>
@@ -226,9 +242,9 @@
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>710</y>
-      <w>190</w>
-      <h>30</h>
+      <y>720</y>
+      <w>152</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>:Delivery</panel_attributes>
     <additional_attributes/>
@@ -236,43 +252,43 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>590</x>
-      <y>710</y>
-      <w>100</w>
-      <h>30</h>
+      <x>608</x>
+      <y>896</y>
+      <w>80</w>
+      <h>24</h>
     </coordinates>
-    <panel_attributes>:Cleaning</panel_attributes>
+    <panel_attributes>:Room</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>90</x>
-      <y>550</y>
-      <w>30</w>
-      <h>180</h>
+      <x>72</x>
+      <y>560</y>
+      <w>24</w>
+      <h>176</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>550</y>
-      <w>30</w>
-      <h>180</h>
+      <x>392</x>
+      <y>792</y>
+      <w>24</w>
+      <h>176</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>410</y>
-      <w>190</w>
-      <h>30</h>
+      <y>360</y>
+      <w>152</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>:DeliveryController</panel_attributes>
     <additional_attributes/>
@@ -280,10 +296,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>300</x>
-      <y>410</y>
-      <w>190</w>
-      <h>30</h>
+      <x>320</x>
+      <y>592</y>
+      <w>152</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>:ProductController</panel_attributes>
     <additional_attributes/>
@@ -291,32 +307,32 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>340</y>
-      <w>490</w>
-      <h>90</h>
+      <x>392</x>
+      <y>304</y>
+      <w>576</w>
+      <h>304</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;70.0;10.0;20.0;470.0;20.0</additional_attributes>
+    <additional_attributes>10.0;360.0;220.0;20.0;700.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>90</x>
-      <y>320</y>
-      <w>790</w>
-      <h>110</h>
+      <x>72</x>
+      <y>288</y>
+      <w>896</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;90.0;10.0;20.0;770.0;20.0</additional_attributes>
+    <additional_attributes>10.0;90.0;340.0;20.0;1100.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>340</x>
-      <y>530</y>
-      <w>120</w>
-      <h>30</h>
+      <x>352</x>
+      <y>776</y>
+      <w>96</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>:ProductDB</panel_attributes>
     <additional_attributes/>
@@ -324,10 +340,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>40</x>
-      <y>530</y>
-      <w>120</w>
-      <h>30</h>
+      <x>32</x>
+      <y>544</y>
+      <w>96</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>:DeliveryDB</panel_attributes>
     <additional_attributes/>
@@ -335,34 +351,34 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>430</y>
-      <w>30</w>
-      <h>120</h>
+      <x>392</x>
+      <y>608</y>
+      <w>24</w>
+      <h>184</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;210.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>20</x>
-      <y>430</y>
-      <w>30</w>
-      <h>300</h>
+      <x>16</x>
+      <y>376</y>
+      <w>24</w>
+      <h>360</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;280.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;430.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>90</x>
-      <y>430</y>
-      <w>30</w>
-      <h>120</h>
+      <x>72</x>
+      <y>376</y>
+      <w>24</w>
+      <h>184</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;210.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
