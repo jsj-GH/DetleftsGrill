@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
   <help_text/>
-  <zoom_level>8</zoom_level>
+  <zoom_level>4</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>968</x>
-      <y>64</y>
-      <w>120</w>
-      <h>24</h>
+      <x>856</x>
+      <y>332</y>
+      <w>60</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>:GUI_WorkSchedule</panel_attributes>
     <additional_attributes/>
@@ -16,10 +16,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>952</x>
-      <y>296</y>
-      <w>144</w>
-      <h>48</h>
+      <x>848</x>
+      <y>448</y>
+      <w>72</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>:WorkScheduleController</panel_attributes>
     <additional_attributes/>
@@ -27,10 +27,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1512</x>
-      <y>304</y>
-      <w>144</w>
-      <h>24</h>
+      <x>1292</x>
+      <y>452</y>
+      <w>72</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>:EmployeeController</panel_attributes>
     <additional_attributes/>
@@ -38,10 +38,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>584</x>
-      <y>536</y>
-      <w>152</w>
-      <h>24</h>
+      <x>664</x>
+      <y>568</y>
+      <w>76</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>:RoomController</panel_attributes>
     <additional_attributes/>
@@ -49,10 +49,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>600</x>
-      <y>720</y>
-      <w>96</w>
-      <h>24</h>
+      <x>672</x>
+      <y>660</y>
+      <w>48</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>:RoomDB</panel_attributes>
     <additional_attributes/>
@@ -60,10 +60,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1208</x>
-      <y>544</y>
-      <w>160</w>
-      <h>24</h>
+      <x>1108</x>
+      <y>600</y>
+      <w>80</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>:WorkScheduleDB</panel_attributes>
     <additional_attributes/>
@@ -71,10 +71,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1512</x>
-      <y>544</y>
-      <w>144</w>
-      <h>24</h>
+      <x>1292</x>
+      <y>572</y>
+      <w>72</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>:EmployeeDB</panel_attributes>
     <additional_attributes/>
@@ -82,10 +82,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>920</x>
-      <y>544</y>
-      <w>96</w>
-      <h>24</h>
+      <x>924</x>
+      <y>704</y>
+      <w>48</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>:WorkSchedule</panel_attributes>
     <additional_attributes/>
@@ -93,10 +93,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1544</x>
-      <y>720</y>
-      <w>72</w>
-      <h>24</h>
+      <x>1308</x>
+      <y>660</y>
+      <w>36</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>:Employee</panel_attributes>
     <additional_attributes/>
@@ -104,10 +104,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>776</x>
-      <y>56</y>
-      <w>208</w>
-      <h>128</h>
+      <x>760</x>
+      <y>328</y>
+      <w>104</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>
 createEmptyWorkSchedule()
@@ -123,50 +123,50 @@ persistWorkSchedule()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1016</x>
-      <y>80</y>
-      <w>336</w>
-      <h>232</h>
+      <x>880</x>
+      <y>340</y>
+      <w>380</w>
+      <h>116</h>
     </coordinates>
     <panel_attributes>1: createEmptyWorkSchedule():void
 2: getEmptyWorkSchedule():workSchedule
 3: ChooseRoomToClean(room: string):HashSet&lt;string&gt; rooms
-4: getProduct(product: string) :HashSet&lt;string&gt; products
-5: createDeliveryRoute()
-6: getDeliveryRoute()
-7: setEmployee()
-8: persistCurrentWorkSchedule()</panel_attributes>
+4: getProduct(product: string) :SortedSet&lt;Product&gt; products
+5: createDeliveryRoute(): LinkedList&lt;DeliveryRoute&gt; deliveryRoutes
+6: getDeliveryRoute(): LinkedList&lt;DeliveryRoute&gt; deliveryRoutes
+7: setEmployee(): ArrayList&lt;Employee&gt; employees
+8: persistCurrentWorkSchedule(date: LocalDate, employee: Employee, deliveryRoute: DeliveryRoute, product: Product, room: Room): workSchedule</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;270.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>584</x>
-      <y>328</y>
-      <w>384</w>
-      <h>224</h>
+      <x>692</x>
+      <y>464</y>
+      <w>196</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>3.1:ChooseRoomToClean(room: string):HashSet&lt;string&gt; rooms</panel_attributes>
-    <additional_attributes>80.0;260.0;80.0;70.0;420.0;70.0;420.0;10.0;460.0;10.0</additional_attributes>
+    <additional_attributes>10.0;260.0;10.0;210.0;350.0;210.0;350.0;10.0;390.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1088</x>
-      <y>296</y>
-      <w>440</w>
-      <h>32</h>
+      <x>916</x>
+      <y>448</y>
+      <w>384</w>
+      <h>16</h>
     </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;20.0;530.0;20.0</additional_attributes>
+    <panel_attributes>7.1: setEmployee(): ArrayList&lt;Employee&gt; employees</panel_attributes>
+    <additional_attributes>10.0;20.0;940.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>640</x>
-      <y>552</y>
-      <w>352</w>
-      <h>184</h>
+      <x>692</x>
+      <y>576</y>
+      <w>176</w>
+      <h>92</h>
     </coordinates>
     <panel_attributes>3.1.1:ChooseRoomToClean(room: string):HashSet&lt;string&gt; rooms</panel_attributes>
     <additional_attributes>10.0;210.0;10.0;10.0</additional_attributes>
@@ -174,44 +174,44 @@ persistWorkSchedule()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1048</x>
-      <y>336</y>
-      <w>256</w>
-      <h>224</h>
+      <x>884</x>
+      <y>468</y>
+      <w>380</w>
+      <h>140</h>
     </coordinates>
-    <panel_attributes/>
-    <additional_attributes>300.0;260.0;300.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
+    <panel_attributes>8.1: persistCurrentWorkSchedule(date: LocalDate, employee: Employee, deliveryRoute: DeliveryRoute, product: Product, room: Room): workSchedule</panel_attributes>
+    <additional_attributes>660.0;330.0;660.0;50.0;40.0;50.0;40.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1576</x>
-      <y>320</y>
-      <w>24</w>
-      <h>240</h>
+      <x>1324</x>
+      <y>460</y>
+      <w>148</w>
+      <h>120</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>7.1.1: setEmployee(): ArrayList&lt;Employee&gt; employees</panel_attributes>
     <additional_attributes>10.0;280.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>960</x>
-      <y>336</y>
-      <w>248</w>
-      <h>224</h>
+      <x>852</x>
+      <y>468</y>
+      <w>216</w>
+      <h>244</h>
     </coordinates>
     <panel_attributes>1.1:createEmptyWorkSchedule():void
 2.1: getEmptyWorkSchedule():workSchedule</panel_attributes>
-    <additional_attributes>10.0;260.0;10.0;10.0</additional_attributes>
+    <additional_attributes>240.0;590.0;240.0;120.0;10.0;120.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>640</x>
-      <y>736</y>
-      <w>360</w>
-      <h>176</h>
+      <x>692</x>
+      <y>668</y>
+      <w>180</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>3.1.1.1:ChooseRoomToClean(room: string):HashSet&lt;string&gt; rooms</panel_attributes>
     <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
@@ -219,10 +219,10 @@ persistWorkSchedule()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1576</x>
-      <y>560</y>
-      <w>24</w>
-      <h>176</h>
+      <x>1324</x>
+      <y>580</y>
+      <w>12</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
@@ -230,10 +230,10 @@ persistWorkSchedule()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>320</x>
-      <y>952</y>
-      <w>152</w>
-      <h>24</h>
+      <x>464</x>
+      <y>776</y>
+      <w>76</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>:Product</panel_attributes>
     <additional_attributes/>
@@ -241,21 +241,21 @@ persistWorkSchedule()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>720</y>
-      <w>152</w>
-      <h>24</h>
+      <x>212</x>
+      <y>664</y>
+      <w>76</w>
+      <h>12</h>
     </coordinates>
-    <panel_attributes>:Delivery</panel_attributes>
+    <panel_attributes>:DeliveryRoute</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>608</x>
-      <y>896</y>
-      <w>80</w>
-      <h>24</h>
+      <x>676</x>
+      <y>748</y>
+      <w>40</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>:Room</panel_attributes>
     <additional_attributes/>
@@ -263,10 +263,10 @@ persistWorkSchedule()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>72</x>
-      <y>560</y>
-      <w>24</w>
-      <h>176</h>
+      <x>248</x>
+      <y>584</y>
+      <w>12</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
@@ -274,10 +274,10 @@ persistWorkSchedule()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>392</x>
-      <y>792</y>
-      <w>24</w>
-      <h>176</h>
+      <x>500</x>
+      <y>696</y>
+      <w>12</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
@@ -285,21 +285,21 @@ persistWorkSchedule()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>360</y>
-      <w>152</w>
-      <h>24</h>
+      <x>212</x>
+      <y>484</y>
+      <w>76</w>
+      <h>12</h>
     </coordinates>
-    <panel_attributes>:DeliveryController</panel_attributes>
+    <panel_attributes>:DeliveryRouteController</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>320</x>
-      <y>592</y>
-      <w>152</w>
-      <h>24</h>
+      <x>464</x>
+      <y>596</y>
+      <w>76</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>:ProductController</panel_attributes>
     <additional_attributes/>
@@ -307,32 +307,34 @@ persistWorkSchedule()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>392</x>
-      <y>304</y>
-      <w>576</w>
-      <h>304</h>
+      <x>500</x>
+      <y>456</y>
+      <w>356</w>
+      <h>148</h>
     </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;360.0;220.0;20.0;700.0;20.0</additional_attributes>
+    <panel_attributes>4.1: getProduct(product: string) :SortedSet&lt;Product&gt; products</panel_attributes>
+    <additional_attributes>10.0;350.0;10.0;130.0;780.0;130.0;780.0;10.0;870.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>72</x>
-      <y>288</y>
-      <w>896</w>
-      <h>88</h>
+      <x>248</x>
+      <y>444</y>
+      <w>608</w>
+      <h>48</h>
     </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;90.0;340.0;20.0;1100.0;20.0</additional_attributes>
+    <panel_attributes>
+5.1: createDeliveryRoute(): LinkedList&lt;DeliveryRoute&gt; deliveryRoutes
+6.1: getDeliveryRoute(): LinkedList&lt;DeliveryRoute&gt; deliveryRoutes</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;20.0;1500.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>352</x>
-      <y>776</y>
-      <w>96</w>
-      <h>24</h>
+      <x>480</x>
+      <y>688</y>
+      <w>48</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>:ProductDB</panel_attributes>
     <additional_attributes/>
@@ -340,45 +342,46 @@ persistWorkSchedule()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>32</x>
-      <y>544</y>
-      <w>96</w>
-      <h>24</h>
+      <x>228</x>
+      <y>576</y>
+      <w>48</w>
+      <h>12</h>
     </coordinates>
-    <panel_attributes>:DeliveryDB</panel_attributes>
+    <panel_attributes>:DeliveryRouteDB</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>392</x>
-      <y>608</y>
-      <w>24</w>
-      <h>184</h>
+      <x>500</x>
+      <y>604</y>
+      <w>172</w>
+      <h>92</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>4.1.1: getProduct(product: string) :SortedSet&lt;Product&gt; products</panel_attributes>
     <additional_attributes>10.0;210.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>16</x>
-      <y>376</y>
-      <w>24</w>
-      <h>360</h>
+      <x>0</x>
+      <y>492</y>
+      <w>232</w>
+      <h>180</h>
     </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;430.0;10.0;10.0</additional_attributes>
+    <panel_attributes>5.1.1: createDeliveryRoute(): LinkedList&lt;DeliveryRoute&gt; deliveryRoutes</panel_attributes>
+    <additional_attributes>560.0;430.0;560.0;140.0;150.0;140.0;150.0;40.0;560.0;40.0;560.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>72</x>
-      <y>376</y>
-      <w>24</w>
-      <h>184</h>
+      <x>248</x>
+      <y>492</y>
+      <w>192</w>
+      <h>92</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>5.2.1: persistDeliveryRoute(): LinkedList&lt;DeliveryRoute&gt; deliveryRoutes
+6.1.1: getDeliveryRoute(): LinkedList&lt;DeliveryRoute&gt; deliveryRoutes</panel_attributes>
     <additional_attributes>10.0;210.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
